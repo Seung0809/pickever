@@ -8,6 +8,7 @@ from .forms import MusicForm, ReportForm
 
 
 def index(request):
+    3/0
     music_list = Music.objects.order_by('create_date')
     context = {'music_list': music_list}
     return render(request, 'pickever/music_list.html', context)
