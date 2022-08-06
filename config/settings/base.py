@@ -192,5 +192,9 @@ LOGGING = {
             'level': 'INFO',
             'propagate': False,
         },
-    }
+        'pickever': {
+            'handlers': ['console', 'file'],
+            'level': 'INFO',
+        },
+    },
 }

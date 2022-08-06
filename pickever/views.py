@@ -5,9 +5,12 @@ from django.contrib import messages
 
 from .models import Music, Report
 from .forms import MusicForm, ReportForm
+import logging
+logger = logging.getLogger('pickever')
 
 
 def index(request):
+    logger.info("INFO 레벨로 출력")
     music_list = Music.objects.order_by('create_date')
     context = {'music_list': music_list}
     return render(request, 'pickever/music_list.html', context)
